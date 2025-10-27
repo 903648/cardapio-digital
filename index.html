@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Digital - [Conviniência do Jorge]</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>[Nome do Seu Negócio]</h1>
+        <p>Selecione os seus itens e envie o pedido diretamente para o WhatsApp!</p>
+    </header>
+
+    <main>
+        <section id="menu">
+            <h2>Nosso Cardápio</h2>
+            <div id="lista-itens">
+                </div>
+        </section>
+
+        <aside id="carrinho">
+            <h2>Seu Pedido</h2>
+            <div id="resumo-pedido">
+                <p>Seu pedido está vazio.</p>
+            </div>
+            
+            <div class="total-area">
+                <span>TOTAL:</span>
+                <span id="total-geral">0.00</span>€
+            </div>
+
+            <button id="enviar-btn" onclick="gerarLinkWhatsapp()">
+                <img src="whatsapp-icon.png" alt="WhatsApp Icon" style="width: 20px; height: 20px;">
+                Enviar Pedido via WhatsApp
+            </button>
+            <p class="aviso">*O atendente pedirá o número da sua mesa/comanda após o envio.</p>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
