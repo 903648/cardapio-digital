@@ -1,7 +1,7 @@
 /* --- style.css --- */
 :root {
     /* Cores personalizáveis */
-    --cor-primaria: #25D366; /* Verde do WhatsApp */
+    --cor-primaria: #eb0202; /* Verde do WhatsApp */
     --cor-fundo: #f4f4f9;
     --cor-texto: #333333;
     --cor-cartao: #ffffff;
@@ -181,4 +181,5 @@ main {
     color: #999;
     text-align: center;
     margin-top: 5px;
+
 }
