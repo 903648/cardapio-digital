@@ -1,0 +1,184 @@
+/* --- style.css --- */
+:root {
+    /* Cores personalizáveis */
+    --cor-primaria: #25D366; /* Verde do WhatsApp */
+    --cor-fundo: #f4f4f9;
+    --cor-texto: #333333;
+    --cor-cartao: #ffffff;
+    --cor-sombra: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px var(--cor-sombra);
+    margin-bottom: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    max-width: 650px; /* Largura ideal para um menu mobile */
+    padding-bottom: 100px; /* Espaço para o carrinho fixo */
+}
+
+/* Títulos das Categorias */
+#menu h2, #menu h3 {
+    text-transform: uppercase;
+    color: #0d9047;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #eeeeee;
+    padding-bottom: 5px;
+}
+#menu h3 {
+    font-size: 1.1em;
+}
+
+/* Estilo do Item (Cardápio) */
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-cartao);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px var(--cor-sombra);
+    transition: transform 0.2s;
+}
+
+.item:hover {
+    transform: translateY(-2px);
+}
+
+.detalhes {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.nome-item {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.categoria {
+    font-size: 0.8em;
+    color: #999;
+}
+
+.preco-item {
+    margin-right: 20px;
+    color: var(--cor-primaria);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Controles de Quantidade */
+.controles {
+    display: flex;
+    align-items: center;
+}
+
+.controles button {
+    background-color: var(--cor-fundo);
+    border: 1px solid #ccc;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-radius: 50%; /* Botões redondos */
+    font-weight: bold;
+    font-size: 1em;
+    color: var(--cor-texto);
+    line-height: 1; /* Alinhamento central */
+    transition: background-color 0.2s;
+}
+
+.controles button:hover {
+    background-color: #dddddd;
+}
+
+.quantidade {
+    display: inline-block;
+    width: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Área do Carrinho (Fixo no rodapé em telas pequenas) */
+#carrinho {
+    position: fixed; /* Fica fixo na tela */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--cor-cartao);
+    padding: 15px;
+    border-top: 5px solid var(--cor-primaria);
+    box-shadow: 0 -4px 10px var(--cor-sombra);
+    z-index: 1000;
+}
+
+#carrinho h2 {
+    font-size: 1.2em;
+    margin-top: 0;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 5px;
+}
+
+#resumo-pedido p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.total-area {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 10px 0;
+    border-top: 2px solid var(--cor-fundo);
+    margin-top: 10px;
+}
+
+#enviar-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+#enviar-btn:hover {
+    background-color: #1DA851;
+}
+
+.aviso {
+    font-size: 0.7em;
+    color: #999;
+    text-align: center;
+    margin-top: 5px;
+}
